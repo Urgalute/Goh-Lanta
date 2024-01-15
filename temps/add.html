@@ -1,0 +1,28 @@
+{{define "add"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/global.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <form class="form" action="/add" method="POST" enctype="multipart/form-data">
+        <input class="form-txt" type="text" name="name" placeholder="Nom"/>
+        <input class="form-txt" type="text" name="team" placeholder="Equipe"/>
+        <input class="form-txt" type="text" name="preview" placeholder="Intro Perso"/>
+        <input class="form-txt-ctn" type="text" name="content" placeholder="Contenu de la fiche"/>
+        <input class="form-submit" type="submit" value="Valider" />
+    </form>
+    
+Ici page de création d'aventurier
+
+
+
+
+
+</body>
+</html>
+{{end}}
