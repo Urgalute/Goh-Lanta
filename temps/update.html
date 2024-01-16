@@ -24,7 +24,13 @@
                 <label for="name">{{.Name}}</label>
                 <input class="form-txt" type="text" name="name" placeholder="Nouveau nom" />
                 <label for="team">{{.Team}}</label>
-                <input class="form-txt" type="text" name="team" placeholder="Nouvelle équipe" />
+                <select class="form-txt" name="team">
+                    <option value="">--Choisissez une nouvelle équipe--</option>
+                    <option value="rouge">Rouge</option>
+                    <option value="bleu">Bleu</option>
+                    <option value="jaune">Jaune</option>
+                    <option value="verte">Verte</option>
+                </select>
                 <label for="preview">{{.Preview}}</label>
                 <input class="form-txt" type="text" name="preview" placeholder="Nouvelle intro" />
                 <label for="content">{{.Content}}</label>

@@ -15,7 +15,13 @@
     </header>
     <form class="form" action="/add" method="POST" enctype="multipart/form-data">
         <input class="form-txt" type="text" name="name" placeholder="Nom"/>
-        <input class="form-txt" type="text" name="team" placeholder="Equipe"/>
+        <select class="form-txt" name="team">
+            <option value="">--Choisissez une équipe--</option>
+            <option value="rouge">Rouge</option>
+            <option value="bleu">Bleu</option>
+            <option value="jaune">Jaune</option>
+            <option value="verte">Verte</option>
+        </select>
         <input class="form-txt" type="text" name="preview" placeholder="Intro Perso"/>
         <input class="form-txt-ctn" type="text" name="content" placeholder="Contenu de la fiche"/>
         <input class="form-submit" type="submit" value="Valider" />
