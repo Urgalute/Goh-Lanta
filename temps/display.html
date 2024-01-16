@@ -8,38 +8,26 @@
     <link rel="stylesheet" href="../static/css/index.css">
     <title>Document</title>
 </head>
-<body>
-
-    
-Ici affichage de tout les aventurier avec possibilité de les suppr
-<div class="content">
-    <div class="main">
-        {{range .}}
-        <a href="/adventurer?type={{.Id}}">
-            <div class="article">
-                <div class="artocle">
-                    <!--<img src="../static/img/{{.Img}}" alt="image de l'article" class="article-img">-->
-                    <div class="article-text">
-                        <h1 class="article-title">{{.Name}}</h1>
-                        <div class="cat-art">{{.Category}}</div>
-                    </div> 
-                </div>
-                <div>
-                <form action="" method="post">
-                   <!--- <input class="searchInput"type="text" name="query" placeholder="Rechercher">-->
-                    <button class="suppr-art-btn" value="{{.Id}}" name="Suppr" id="Suppr" type="submit">Supprimer</button>
-                    <!--<input type="submit" value="{{.Id}}" name="Suppr" id="Suppr" class="suppr-art-btn">-->
-                </form> 
-                </div>                  
-            </div>    
-        </a>
-        {{end}}
-    </div>
-</div>
-
-
-
-
-</body>
+    <body>
+        <a href="/add">Créer un aventurier</a>
+        
+        Ici affichage de tout les aventurier avec possibilité de les suppr
+        <div class="content">
+            <div class="main">
+                {{range .}}
+                <a href="/adventurer?type={{.Id}}">
+                    <div class="article">
+                        <div class="artocle">
+                            <div class="article-text">
+                                <h1 class="article-title">{{.Name}}</h1>
+                                <div class="cat-art">{{.Team}}</div>
+                            </div> 
+                        </div>                 
+                    </div>    
+                </a>
+                {{end}}
+            </div>
+        </div>
+    </body>
 </html>
 {{end}}

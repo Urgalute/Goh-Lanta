@@ -1,6 +1,7 @@
 {{define "adventurer"}}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,37 @@
     <link rel="stylesheet" href="../static/css/index.css">
     <title>Document</title>
 </head>
+
 <body>
+    <a href="/add">Créer un aventurier</a>
+    <a href="/display">Aventurier présent dans l'aventure</a>
 
-    
-Ici page de l'aventurier selectionné
+    Ici page de l'aventurier selectionné
+    {{range .}}
+    {{.}}
+    {{.Id}}
+    <a href="/update?type={{.Id}}">
+        <div class="article">
+            <div class="artocle">
+                <div class="article-text">
+                    <h1 class="article-title">{{.Name}}</h1>
+                    <div class="cat-art">{{.Team}}</div>
+                </div>
+            </div>
+        </div>
+    </a>
+    <form action="/remove" method="post">
+        <!--- <input class="searchInput"type="text" name="query" placeholder="Rechercher">-->
+        <button class="suppr-art-btn" value="{{.Id}}" name="Suppr" id="Suppr" type="submit">Supprimer</button>
+        <!--<input type="submit" value="{{.Id}}" name="Suppr" id="Suppr" class="suppr-art-btn">-->
+    </form>
 
+    {{end}}
 
 
 
 
 </body>
+
 </html>
 {{end}}

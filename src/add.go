@@ -38,12 +38,6 @@ func AddAdv(adventurer data.AdvStruct, save bool) {
 	}
 }
 
-// Fonction qui récup la longueur du tableau d'Adv +1 pour un nouvel article
-func GetAdvId() int {
-	id := len(Adventurer) + 1
-	return id
-}
-
 func SetDataToJson() {
 	data, err := json.Marshal(Adventurer)
 	if err != nil {
@@ -53,17 +47,3 @@ func SetDataToJson() {
 	os.WriteFile("data/adv.json", data, 0644)
 }
 
-// fonction pour supprimer un adv de notre tableau et potentiellement du json
-func RemoveAdv(index int, save bool) {
-	GetDataFromJson()
-	var NewArt []data.AdvStruct
-	for _, art := range Adventurer {
-		if art.Id != index {
-			NewArt = append(NewArt, art)
-		}
-	}
-	Adventurer = NewArt
-	if save {
-		SetDataToJson()
-	}
-}

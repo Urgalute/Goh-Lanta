@@ -11,7 +11,11 @@ func InitServ() {
 
 	http.HandleFunc("/", src.Home)
 	http.HandleFunc("/add", src.FuncAdd)
-	http.HandleFunc("/adventurer", src.FuncAdd)
+	http.HandleFunc("/display", src.Display)
+	http.HandleFunc("/adventurer", src.DisplayAdv)
+	http.HandleFunc("/remove", src.Remove)
+	http.HandleFunc("/updatepage", src.UpdatePage)
+	http.HandleFunc("/update", src.Update)
 
 
 

@@ -6,5 +6,6 @@ import (
 )
 
 func Display(w http.ResponseWriter, r *http.Request) {
-	temps.Temp.ExecuteTemplate(w, "display", nil)
+	data := GetAllAdv()
+	temps.Temp.ExecuteTemplate(w, "display", data)
 }
