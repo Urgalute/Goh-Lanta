@@ -9,7 +9,7 @@ import (
 
 // Fonction qui affiche le template de l'aventurier pour mettre à jour les infos
 func UpdatePage(w http.ResponseWriter, r *http.Request) {
-	id, err := strconv.Atoi(r.URL.Query().Get("type"))
+	id, err := strconv.Atoi(r.FormValue("Update"))
 	if err != nil {
 		http.Error(w, "ID invalide", http.StatusBadRequest)
 		return
