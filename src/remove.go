@@ -6,11 +6,11 @@ import (
 	"strconv"
 )
 
-// fonction pour supprimer un article de notre tableau et potentiellement du json
+// fonction pour supprimer un aventurier du tableau et du json
 func Remove(w http.ResponseWriter, r *http.Request) {
 	AdvId, _ := strconv.Atoi(r.FormValue("Suppr"))
 	if AdvExist(int(AdvId)) {
-		RemoveAdv(int(AdvId), true)
+		RemoveAdv(AdvId, true)
 		http.Redirect(w, r, "/display", http.StatusSeeOther)
 	} else {
 		http.Redirect(w, r, "/display", http.StatusSeeOther)

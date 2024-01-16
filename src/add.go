@@ -24,11 +24,13 @@ func FuncAdd(w http.ResponseWriter, r *http.Request) {
 		//Adventurer.Img = handler.Filename
 		Adventurer.Id = GetAdvId()
 		AddAdv(Adventurer, true)
+		http.Redirect(w, r, "/display", http.StatusSeeOther)
+	} else {
+		temps.Temp.ExecuteTemplate(w, "add", nil)
 	}
-	temps.Temp.ExecuteTemplate(w, "add", nil)
 }
 
-// fonction pour ajouter un adv à notre tableau et potentiellement au json
+// fonction pour ajouter un adv à notre tableau et au json
 func AddAdv(adventurer data.AdvStruct, save bool) {
 	GetDataFromJson()
 	Adventurer = append(Adventurer, adventurer)
@@ -46,4 +48,3 @@ func SetDataToJson() {
 	}
 	os.WriteFile("data/adv.json", data, 0644)
 }
-

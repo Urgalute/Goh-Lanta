@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strconv"
 )
-
+//Affichage d'un aventurier par ID
 func DisplayAdv(w http.ResponseWriter, r *http.Request) {
 
 	id, err := strconv.Atoi(r.URL.Query().Get("type"))

@@ -11,9 +11,10 @@
 </head>
 
 <body>
-    <a href="/add">Créer un aventurier</a>
-    <a href="/display">Aventurier présent dans l'aventure</a>
-
+    <header>
+        <a href="/add">Créer un aventurier</a>
+        <a href="/display">Aventurier présent dans l'aventure</a>
+    </header>
     Ici page de l'aventurier selectionné
     {{range .}}
     {{.}}
@@ -23,7 +24,7 @@
                 <label for="name">{{.Name}}</label>
                 <input class="form-txt" type="text" name="name" placeholder="Nouveau nom" />
                 <label for="team">{{.Team}}</label>
-                <input class="form-txt" type="text" name="Team" placeholder="Nouvelle équipe" />
+                <input class="form-txt" type="text" name="team" placeholder="Nouvelle équipe" />
                 <label for="preview">{{.Preview}}</label>
                 <input class="form-txt" type="text" name="preview" placeholder="Nouvelle intro" />
                 <label for="content">{{.Content}}</label>
