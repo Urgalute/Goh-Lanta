@@ -6,15 +6,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/global.css">
-    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/update.css">
     <title>Goh-Lanta--Modifier votre Aventurier</title>
 </head>
 
 <body>
-    <header>
-        <a href="/add">Créer un aventurier</a>
-        <a href="/display">Aventurier présent dans l'aventure</a>
-    </header>
+    <div class="header">
+        <header>
+            <div class="button">
+                <a href="/add">Créer un aventurier</a>
+            </div>
+             <div class="button">
+                <a href="/display">Voir les aventurier déjà créer</a>
+            </div>
+        </header>
+    </div>
     Ici page de l'aventurier selectionné
     {{range .}}
     {{.}}

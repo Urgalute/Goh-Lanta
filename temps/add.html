@@ -1,38 +1,49 @@
 {{define "add"}}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/global.css">
-    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/add.css">
     <title>Goh-Lanta--Nouvel Aventurier</title>
 </head>
+
 <body>
-    <header>
-        <a href="/add">Créer un aventurier</a>
-        <a href="/display">Aventurier déjà présent dans l'aventure</a>
-    </header>
-    <form class="form" action="/add" method="POST" enctype="multipart/form-data">
-        <input class="form-txt" type="text" name="name" placeholder="Nom"/>
-        <select class="form-txt" name="team">
-            <option value="">--Choisissez une équipe--</option>
-            <option value="rouge">Rouge</option>
-            <option value="bleu">Bleu</option>
-            <option value="jaune">Jaune</option>
-            <option value="verte">Verte</option>
-        </select>
-        <input class="form-txt" type="text" name="preview" placeholder="Intro Perso"/>
-        <input class="form-txt-ctn" type="text" name="content" placeholder="Contenu de la fiche"/>
-        <input class="form-submit" type="submit" value="Valider" />
-    </form>
-    
-Ici page de création d'aventurier
+    <div class="header">
+        <header>
+            <div class="button">
+                <a href="/add">Créer un aventurier</a>
+            </div>
+            <div class="button">
+                <a href="/display">Voir les aventurier déjà créer</a>
+            </div>
+        </header>
+    </div>
+    <div class="addform">
+        <form class="form" action="/add" method="POST" enctype="multipart/form-data">
+            <input class="form-txt" type="text" name="name" placeholder="Nom">
+            <select class="form-txt" name="team">
+                <option value="">--Choisissez une équipe--</option>
+                <option value="rouge">Rouge</option>
+                <option value="bleu">Bleu</option>
+                <option value="jaune">Jaune</option>
+                <option value="verte">Verte</option>
+            </select>
+            <input class="form-txt" type="text" name="preview" placeholder="Intro Perso" />
+            <input class="form-txt" type="text" name="content" placeholder="Contenu de la fiche" />
+            <input class="form-txt" id="submit" type="submit" value="Valider" />
+        </form>
+    </div>
+
+    Ici page de création d'aventurier
 
 
 
 
 
 </body>
+
 </html>
 {{end}}

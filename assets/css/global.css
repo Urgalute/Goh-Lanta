@@ -1,0 +1,34 @@
+ body {
+    background-image: url("../img/cover.jpg");
+    background-size:cover;
+}
+@font-face {
+    font-family: 'TropicalAsianDEMO';
+    src: url('../fonts/TropicalAsianDEMO-Regular.ttf') format('truetype');
+}
+.header {
+    position: sticky;
+    top: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 50px 30px 30px 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'TropicalAsianDEMO',sans-serif ;
+    font-size:300%;
+  }
+  .header a:hover {
+    color: #835238;
+  }
+  .header a {
+    text-decoration: none;
+    color: #45381e;
+  }
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+

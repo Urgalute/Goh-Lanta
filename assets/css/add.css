@@ -1,0 +1,33 @@
+.addform {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    max-width: 30%;
+    background: rgba(255, 255, 255, 0);
+    padding: 20px;
+    border-radius: 10px; 
+}
+#submit:hover {
+    background-color: #45381e;
+}
+
+form input,
+form label, form select {
+    background: rgba(255, 255, 255, 0);
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+    color :black;
+}
+form input::placeholder {
+    opacity: 150%;
+}
+.form-txt {
+    font-size: 30px;
+    font-family: 'TropicalAsianDEMO',sans-serif ;
+}
+option {
+    font-family:'TropicalAsianDEMO',sans-serif ;
+}

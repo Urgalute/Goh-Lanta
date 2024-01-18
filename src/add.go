@@ -15,6 +15,7 @@ func Add(w http.ResponseWriter, r *http.Request) {
 
 // récupération des données du formulaire
 func FuncAdd(w http.ResponseWriter, r *http.Request) {
+
 	if r.Method == "POST" {
 		var Adventurer data.AdvStruct
 		Adventurer.Name = r.FormValue("name")

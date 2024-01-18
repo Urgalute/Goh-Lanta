@@ -1,0 +1,11 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome h1{
+    font-family: 'TropicalAsianDEMO',sans-serif ;
+    font-size:600%;
+    color: #37332a;
+}
