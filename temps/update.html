@@ -16,36 +16,60 @@
             <div class="button">
                 <a href="/add">Créer un aventurier</a>
             </div>
-             <div class="button">
+            <div class="button">
                 <a href="/display">Voir les aventurier déjà créer</a>
             </div>
         </header>
     </div>
-    Ici page de l'aventurier selectionné
-    {{range .}}
-    {{.}}
-    <div class="content">
-        <div class="main">
-            <form class="form" action="/update?type={{.Id}}" method="post" enctype="multipart/form-data">
-                <label for="name">Nom actuel: {{.Name}}</label>
-                <input class="form-txt" type="text" name="name" placeholder="Nouveau nom" />
-                <label for="team">Equipe actuelle: {{.Team}}</label>
-                <select class="form-txt" name="team">
-                    <option value="">--Choisissez une nouvelle équipe--</option>
-                    <option value="rouge">Rouge</option>
-                    <option value="bleu">Bleu</option>
-                    <option value="jaune">Jaune</option>
-                    <option value="verte">Verte</option>
-                </select>
-                <label for="preview">{{.Preview}}</label>
-                <input class="form-txt" type="text" name="preview" placeholder="Nouvelle intro" />
-                <label for="content">{{.Content}}</label>
-                <input class="form-txt-ctn" type="text" name="content" placeholder="Nouveau contenu de fiche" />
-                <input class="form-submit" type="submit" value="Update !!" />
-            </form>
+    <div class="mainupdate">
+        {{range .}}
+        <div class="content">
+            <div class="main">
+                <form class="form" action="/update?type={{.Id}}" method="post" enctype="multipart/form-data">
+                    <div class="name">
+                        <div class="previousname">
+                            <label for="name">Nom actuel: {{.Name}}</label>
+                        </div>
+                        <div class="updatename">
+                            <input class="form-txt" type="text" name="name" placeholder="Nouveau nom" />
+                        </div>
+                    </div>
+                    <div class="team">
+                        <div class="previousteam">
+                            <label for="team">Equipe actuelle: {{.Team}}</label>
+                        </div>
+                        <div class="updateteam">
+                            <select class="form-txt" name="team">
+                                <option value="">--Choisissez une nouvelle équipe--</option>
+                                <option value="rouge">Rouge</option>
+                                <option value="bleu">Bleu</option>
+                                <option value="jaune">Jaune</option>
+                                <option value="verte">Verte</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="preview">
+                        <div class="previouspreview">
+                            <label for="preview">{{.Preview}}</label>
+                        </div>
+                        <div class="updatepreview">
+                            <input class="form-txt" type="text" name="preview" placeholder="Nouvelle intro" />
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="previouscontent"> <label for="content">{{.Content}}</label></div>
+                        <div class="updatecontent"> <input class="form-txt-ctn" type="text" name="content"
+                                placeholder="Nouveau contenu de fiche" /></div>
+                    </div>
+                    <div class="submitbutton"> <input class="form-submit" type="submit" value="Update !!" /></div>
+
+
+
+                </form>
+            </div>
         </div>
+        {{end}}
     </div>
-    {{end}}
 
 
 

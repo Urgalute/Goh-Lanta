@@ -16,30 +16,29 @@
             <div class="button">
                 <a href="/add">Créer un aventurier</a>
             </div>
-             <div class="button">
+            <div class="button">
                 <a href="/display">Voir les aventurier déjà créer</a>
             </div>
         </header>
     </div>
-    Ici page de l'aventurier selectionné
-    {{range .}}
-    {{.}}
-    {{.Id}}
-    <div class="article">
-        <div class="artocle">
-            <div class="article-text">
-                <h1 class="article-title">{{.Name}}</h1>
-                <div class="cat-art">{{.Team}}</div>
+    <div class="adventurer">
+        {{range .}}
+        <div class="article">
+            <div class="artocle">
+                <div class="article-text">
+                    <h1 class="article-title">{{.Name}}</h1>
+                    <div class="cat-art">{{.Team}}</div>
+                </div>
             </div>
         </div>
+        <form action="/updatepage" method="post">
+            <button class="suppr-art-btn" value="{{.Id}}" name="Update" id="Update" type="submit">Modifier</button>
+        </form>
+        <form action="/remove" method="post">
+            <button class="suppr-art-btn" value="{{.Id}}" name="Suppr" id="Suppr" type="submit">Supprimer</button>
+        </form>
+        {{end}}
     </div>
-    <form action="/updatepage" method="post">
-        <button class="suppr-art-btn" value="{{.Id}}" name="Update" id="Update" type="submit">Modifier</button>
-    </form>
-    <form action="/remove" method="post">
-        <button class="suppr-art-btn" value="{{.Id}}" name="Suppr" id="Suppr" type="submit">Supprimer</button>
-    </form>
-    {{end}}
 </body>
 
 </html>

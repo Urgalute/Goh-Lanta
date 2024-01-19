@@ -1,0 +1,14 @@
+.displaymain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.main a {
+    text-decoration: none;
+    color: #37332a;
+}
+.main a:hover {
+    color: #45381e;
+}

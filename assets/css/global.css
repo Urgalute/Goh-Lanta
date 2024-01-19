@@ -1,11 +1,19 @@
+@font-face {
+  font-family: 'TropicalAsianDEMO';
+  src: url('../fonts/TropicalAsianDEMO-Regular.ttf') format('truetype');
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'TropicalAsianDEMO',sans-serif ;
+ }
  body {
+    width: 100vw;
+    height: 100vh;
     background-image: url("../img/cover.jpg");
     background-size:cover;
 }
-@font-face {
-    font-family: 'TropicalAsianDEMO';
-    src: url('../fonts/TropicalAsianDEMO-Regular.ttf') format('truetype');
-}
+
 .header {
     position: sticky;
     top: 0;
@@ -14,9 +22,8 @@
     padding: 50px 30px 30px 30px;
     display: flex;
     justify-content: center;
-    width: 100%;
+    width:100%;
     box-sizing: border-box;
-    font-family: 'TropicalAsianDEMO',sans-serif ;
     font-size:300%;
   }
   .header a:hover {
